@@ -138,14 +138,19 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `PSPFoward`.`PSP_has_Programa` (
   `PSP_idPSP` INT NOT NULL COMMENT '',
   `Programa_idPrograma` INT NOT NULL COMMENT '',
+  
   PRIMARY KEY (`PSP_idPSP`, `Programa_idPrograma`)  COMMENT '',
+  
   INDEX `fk_PSP_has_Programa_Programa1_idx` (`Programa_idPrograma` ASC)  COMMENT '',
   INDEX `fk_PSP_has_Programa_PSP1_idx` (`PSP_idPSP` ASC)  COMMENT '',
+  
   CONSTRAINT `fk_PSP_has_Programa_PSP1`
-    FOREIGN KEY (`PSP_idPSP`)
+   
+   FOREIGN KEY (`PSP_idPSP`)
     REFERENCES `PSPFoward`.`PSP` (`idPSP`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
+  
   CONSTRAINT `fk_PSP_has_Programa_Programa1`
     FOREIGN KEY (`Programa_idPrograma`)
     REFERENCES `PSPFoward`.`Programa` (`idPrograma`)
