@@ -107,3 +107,5 @@ create table PSP_Has_Program (
     constraint FK_Programa
 		foreign key (Programa_IdPrograma)	references PSP.Programa(IdPrograma)
 );
+
+show tables;

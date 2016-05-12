@@ -102,7 +102,4 @@ use PSP;
     insert into PSP.PSP_Time_Recording_Log (StartAndDateTime,StopAndDateTime) values ('1999-10-09 11:00:10','1999-11-25 12:10:19'); 
     insert into PSP.PSP_Time_Recording_Log (StartAndDateTime,StopAndDateTime) values ('2001-09-14 23:22:10','2001-09-14 23:50:19'); 
     
-    select * from PSP_Defect_Recording_Log;
-    select * from Instructor;
-    
-    delete  from PSP_Defect_Recording_Log;
+   
